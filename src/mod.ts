@@ -2,7 +2,7 @@ import { Command } from './types.ts';
 
 const comms = new Map<Command['data']['name'], Command>();
 
-for (const file of Deno.readDirSync('./src/commands')) {
+for await (const file of Deno.readDir('./src/commands')) {
 	const command = await import(`./commands/${file.name}`).then((b) =>
 		b.default as Command
 	);
