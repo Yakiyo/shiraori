@@ -1,0 +1,18 @@
+{
+	"lint": {
+		"files": {
+			"include": ["./src"]
+		}
+	},
+	"fmt": {
+		"options": {
+			"useTabs": true,
+			"lineWidth": 70,
+			"singleQuote": true
+		}
+	},
+	"tasks": {
+		"fix": "deno fmt && deno lint",
+		"deploy": "deno run --allow-net --allow-env --allow-read deploy.ts"
+	}
+}
