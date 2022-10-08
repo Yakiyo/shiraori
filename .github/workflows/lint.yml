@@ -11,11 +11,11 @@ jobs:
 		with:
 		  deno-version: v1.x
 
-	  - name: Print deno version
+	- name: Print deno version
 		run: deno --version
 
-	  - name: Check format
+	- name: Check format
 		run: deno fmt --check
 
-	  - name: Lint files
+	- name: Lint files
 		run: deno lint
