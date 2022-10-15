@@ -5,6 +5,7 @@ import {
 	InteractionResponse,
 } from 'https://deno.land/x/discordeno@16.0.0/mod.ts';
 
+export { ApplicationCommandOptionTypes } from 'https://deno.land/x/discordeno@16.0.0/mod.ts';
 // Enums for application types
 // https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-types
 
