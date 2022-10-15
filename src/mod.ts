@@ -1,12 +1,11 @@
 import { Command } from './types.ts';
+import ping from './commands/ping.ts';
+import help from './commands/help.ts';
 
-const comms = new Map<Command['data']['name'], Command>();
+const commandMap = new Map<Command['data']['name'], Command>();
 
-for await (const file of Deno.readDir('./src/commands')) {
-	const command = await import(`./commands/${file.name}`).then((b) =>
-		b.default as Command
-	);
-	comms.set(command.data.name, command);
-}
+commandMap
+	.set(ping.data.name, ping)
+	.set(help.data.name, help);
 
-export const commands = comms;
+export const commands = commandMap;
