@@ -1,7 +1,6 @@
 # Shiraori
 
-A serverless discord bot running on Deno & hosted on Deno Deploy.
-Currently work in progress
+Just testing a server discord bot built with Deno and hosted on Deno Deploy
 
 ## Author
 
